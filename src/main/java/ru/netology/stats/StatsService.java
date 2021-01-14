@@ -10,13 +10,9 @@ public class StatsService {
     }
 
     public long calculateAverageSalePerMonth(long[] sales){
-        //long totalsum = 0;
 
-        //for (long sale : sales) {
-        //    totalsum += sale;
-        //    }
-        StatsService service = new StatsService();
-        long totalsum = service.calculateTotalSum(sales);
+
+        long totalsum = calculateTotalSum(sales);
         int amountmonthes = sales.length;
         long averagesumpermonth = totalsum / amountmonthes;
 
@@ -56,15 +52,9 @@ public class StatsService {
     }
 
     public long calculateLessAverageSalePerMonthAmount(long[] sales){
-        //long totalsum = 0;
 
-        //for (long sale : sales) {
-        //    totalsum += sale;
-        //}
 
-        //int amountmonthes = sales.length;
-        StatsService service = new StatsService();
-        long averagesumpermonth = service.calculateAverageSalePerMonth(sales);//totalsum / amountmonthes;
+        long averagesumpermonth = calculateAverageSalePerMonth(sales);
 
         int amountmonthlessaverage = 0;
         for (long sale : sales) {
@@ -76,16 +66,9 @@ public class StatsService {
     }
 
     public long calculateGreaterAverageSalePerMonthAmount(long[] sales){
-        //long totalsum = 0;
 
-        //for (long sale : sales) {
-            //totalsum += sale;
-        //}
 
-        //int amountmonthes = sales.length;
-        //long averagesumpermonth = totalsum / amountmonthes;
-        StatsService service = new StatsService();
-        long averagesumpermonth = service.calculateAverageSalePerMonth(sales);
+        long averagesumpermonth = calculateAverageSalePerMonth(sales);
 
         int amountmonthgreateraverage = 0;
         for (long sale : sales) {
